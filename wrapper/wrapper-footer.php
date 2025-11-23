@@ -1,19 +1,9 @@
 <?php /* Wrapper Name: Footer */ ?>
-<div class="row copyright">
-	<div class="span4">	
-		<div data-motopress-type="static" data-motopress-static-file="static/static-footer-nav.php">
-			<?php get_template_part("static/static-footer-nav"); ?>
-		</div>	
-		<div data-motopress-type="static" data-motopress-static-file="static/static-footer-text.php">
-			<?php get_template_part("static/static-footer-text"); ?>
-		</div>	
+<footer class="site-footer">
+	<div class="container p-relative">
+		<div class="logo-watermark" aria-label="Logo Watermark">
+			<img src="/assets/footer-logo.svg" alt="СоюзХлеб" class="logo-watermark-fallback"/>
+		</div>
 	</div>
-	<!-- Social Links -->
-	<div class="span3 social-nets-wrapper" data-motopress-type="static" data-motopress-static-file="static/static-social-networks.php">
-		<?php get_template_part("static/static-social-networks"); ?>
-	</div>
-	<!-- /Social Links -->
-	<div class="span5" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar">
-		<?php dynamic_sidebar("footer-sidebar"); ?>
-	</div>
-</div>
+</footer>
+<script src="/assets/main.js" type="module"></script>
