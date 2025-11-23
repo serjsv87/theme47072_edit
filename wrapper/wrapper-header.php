@@ -49,10 +49,11 @@
             <a href="/#work" class="nav-link">Как работаем</a>
             <a href="/#production" class="nav-link">Производство</a>
             <a href="/#contact" class="nav-link">Контакты</a>
+            <a href="/blog" class="nav-link">Блог</a>
         </div>
         <!-- <div class="nav-footer">
-            <button class="btn btn-primary" data-modal="pilot-modal">Обсудить пилот</button>
-        </div> -->
+                    <button class="btn btn-primary" data-modal="pilot-modal">Обсудить пилот</button>
+                </div> -->
     </nav>
 </header>
 
