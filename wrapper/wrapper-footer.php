@@ -6,25 +6,35 @@
 		</div>
 	</div>
 </footer>
-<script src="/assets/main.js" type="module"></script>
 <script>
-// Fix navigation for WordPress pages - allow links to main page to work
+// Fix navigation for WordPress pages - prevent smooth scroll errors
 document.addEventListener('DOMContentLoaded', function() {
   const currentPath = window.location.pathname;
   const isWordPressPage = currentPath.includes('/blog/');
   
   if (isWordPressPage) {
-    // On WordPress pages, don't prevent default for nav links
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        // If link points to homepage with anchor, allow normal navigation
-        if (href && (href.startsWith('/') || href.includes('/#'))) {
-          // Don't prevent default - let browser navigate normally
-          return true;
+    // Override querySelector to handle invalid anchor selectors gracefully
+    const originalQuerySelector = Document.prototype.querySelector;
+    Document.prototype.querySelector = function(selector) {
+      try {
+        // If selector starts with /# it's an invalid anchor link
+        if (typeof selector === 'string' && selector.startsWith('/#')) {
+          return null; // Return null so code won't try to scroll
         }
-      }, true); // Use capture phase to run before other listeners
-    });
+        return originalQuerySelector.call(this, selector);
+      } catch (e) {
+        return null;
+      }
+    };
+    
+    // Ensure nav links work normally on WordPress pages
+    setTimeout(() => {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+      });
+    }, 100);
   }
 });
 </script>
+<script src="/assets/main.js" type="module"></script>
