@@ -7,7 +7,7 @@
     <div class="header-bg"></div>
     <div class="header-container">
         <div class="logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
+            <a href="/">
                 <svg width="176" height="93" viewbox="0 0 176 93" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M94.1962 46.5567H84.5555L87.9947 53.8744L80.4627 46.6585C74.9097 47.4466 70.6016 53.0863 70.6016 59.9343V62.7476H105.388V59.9343C105.388 52.5461 100.377 46.5541 94.1962 46.5541V46.5567Z" fill="white"/>
                     <path d="M88.0004 0C105.518 0 119.768 14.338 119.768 31.9642V62.7462H108.114V31.9642C108.114 20.8023 99.0883 11.7204 87.9952 11.7204C76.902 11.7204 67.876 20.8023 67.876 31.9642V62.7462H56.2227V31.9642C56.2227 14.338 70.4775 0 87.9952 0H88.0004Z" fill="white"/>
@@ -42,17 +42,17 @@
             </svg>
         </button>
         <div class="nav-content">
-            <a href="<?php echo esc_url(home_url('/#hero')); ?>" class="nav-link">Главная</a>
-            <a href="<?php echo esc_url(home_url('/#about')); ?>" class="nav-link">О компании</a>
-            <a href="<?php echo esc_url(home_url('/#products')); ?>" class="nav-link">Продукция</a>
-            <a href="<?php echo esc_url(home_url('/#assortment')); ?>" class="nav-link">Ассортимент</a>
-            <a href="<?php echo esc_url(home_url('/#work')); ?>" class="nav-link">Как работаем</a>
-            <a href="<?php echo esc_url(home_url('/#production')); ?>" class="nav-link">Производство</a>
-            <a href="<?php echo esc_url(home_url('/#contact')); ?>" class="nav-link">Контакты</a>
+            <a href="/#hero" class="nav-link">Главная</a>
+            <a href="/#about" class="nav-link">О компании</a>
+            <a href="/#products" class="nav-link">Продукция</a>
+            <a href="/#assortment" class="nav-link">Ассортимент</a>
+            <a href="/#work" class="nav-link">Как работаем</a>
+            <a href="/#production" class="nav-link">Производство</a>
+            <a href="/#contact" class="nav-link">Контакты</a>
         </div>
-        <div class="nav-footer">
+        <!-- <div class="nav-footer">
             <button class="btn btn-primary" data-modal="pilot-modal">Обсудить пилот</button>
-        </div>
+        </div> -->
     </nav>
 </header>
 

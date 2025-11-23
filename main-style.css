@@ -153,26 +153,6 @@ input.btn {
 }
 /* #Header
 ================================================== */
-.header {
-  background: transparent;
-  border: none;
-  padding: 124px 0 31px 0;
-}
-.header-line {
-  overflow: hidden;
-  height: 8px;
-  background: #fac785;
-  margin-top: 46px;
-}
-.header .search-form input.search-form_it {
-  width: 80%;
-  float: left;
-}
-.header .search-form .btn {
-  margin-top: 2px !important;
-  margin-left: 15px;
-  float: left !important;
-}
 /*/ Header */
 /* Logo
 ---------------------------------------- */
@@ -470,7 +450,7 @@ p.logo_tagline {
 }
 /**/
 .title-section {
-  padding-top: 63px;
+  padding-top: 230px;
 }
 .title-section h1 {
   margin-bottom: 19px;
@@ -889,6 +869,15 @@ ul.banners li {
 /*/ Shortcodes */
 /* #Footer
 ================================================== */
+.footer {
+  padding: 0;
+  border-top: none;
+}
+.footer .span12,
+.footer .container {
+  width: 100%;
+  padding: 0;
+}
 .search-form input {
   line-height: 18px;
   font-size: 15px;
